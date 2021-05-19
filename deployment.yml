@@ -28,3 +28,9 @@ spec:
       containers:
         - name: story
           image: starlightromero/kub-data-demo:1
+          volumeMounts:
+            - mountPath: /app/story
+              name: story-volume
+      volumes:
+        - name: story-volume
+          emptyDir: {}
